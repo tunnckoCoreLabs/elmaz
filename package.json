@@ -9,5 +9,21 @@
   "private": true,
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "scripts": {
+    "clean": "run-s clean:*",
+    "clean:modules": "rm -rf packages/*/node_modules",
+    "clean:dest": "rm -rf packages/*/dest",
+    "fresh": "yarn install",
+    "prebuild": "run-s clean fresh",
+    "build": "run-s --silent build:*",
+    "build:emitter": "cd packages/emitter && yarn build && cd ../../",
+    "build:actor": "cd packages/create-actor && yarn build && cd ../../",
+    "build:store": "cd packages/create-store && yarn build && cd ../../",
+    "build:view": "cd packages/create-view && yarn build && cd ../../",
+    "build:elmaz": "cd packages/elmaz && yarn build && cd ../../"
+  },
+  "devDependencies": {
+    "run-s": "^0.0.0"
+  }
 }
