@@ -1,0 +1,2 @@
+!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?module.exports=t():"function"==typeof define&&define.amd?define(t):e.elmazCreateView=t()}(this,function(){"use strict";return function(e,t){var n={emit:t.emit,store:t.store,actions:t.actions,dispatch:t.dispatch},i=null,o=function(t,n,o){return i=e(t,n,o)};return t.off("stateChange"),t.on("stateChange",function(e){n=Object.assign({},n,e),t.emit("render",o,n,i)}),t.emit("render",o,n,i),i}});
+//# sourceMappingURL=elmaz-create-view.umd.js.map

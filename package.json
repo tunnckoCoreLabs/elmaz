@@ -1,0 +1,13 @@
+{
+  "name": "elmaz-monorepo",
+  "version": "0.0.0",
+  "description": "Unidirectional, functional and robust state management in 800 bytes, a la Elm Architecture",
+  "main": "index.js",
+  "repository": "tunnckoCore/elmaz",
+  "author": "Charlike Mike Reagent <@tunnckoCore> (https://i.am.charlike.online)",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}
